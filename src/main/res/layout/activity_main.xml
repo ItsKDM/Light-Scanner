@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context="com.example.kdm.lightscanner.ui.activities.MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_create_pdf_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/ef_ic_camera_white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pdfs_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/pw_main"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_progressIndeterminate="true" />
+
+    <LinearLayout
+        android:id="@+id/no_file_layout_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            app:materialIcon="file_pdf"
+            app:materialIconColor="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No File"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="You have not created any file." />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
